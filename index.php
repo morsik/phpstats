@@ -9,7 +9,6 @@ include('./ua.php');
 $f = fopen($logfile, 'r');
 if (!$f) die("error while opening log");
 
-//$sites    = array('Niebezpiecznik.pl' => 0, 'Wykop.pl' => 0, 'Facebook' => 0, 'other' => 0, 'direct' => 0);
 $sites    = array();
 $browsers = array();
 $oses     = array();
@@ -49,22 +48,8 @@ while (!feof($f))
 					break;
 			}
 			$sites[$url['host']]++;
-			/*foreach ($sites as $s => $c)
-			{
-				if (preg_match('#^.*'.str_replace('.', '\.', $s).'.*$#i', $match[4]))
-				{
-					$sites[$s]++;
-					$found = true;
-					break;
-				}
-			}
-			if (!$found)
-			{
-				$sites['other']++;
-			}*/
 		}
 		//  END  // count reflinks
-
 
 		// BEGIN // collect ua data
 		$ua = getBrowser($match[5]);
