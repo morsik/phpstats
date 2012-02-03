@@ -27,8 +27,7 @@ while (!feof($f))
 		$count++;
 
 		// BEGIN // count reflinks
-		$found = false;
-		if (preg_match('#^-$#', $match[4]))
+		if ($match[4] == '-')
 		{
 			$sites['direct']++;
 		}
@@ -74,7 +73,7 @@ function drawProgress($x, $color)
 ?>
 <html>
 <head>
-	<title>rootnode-dump.sql stats</title>
+	<title>phpstats &raquo; <?php echo $uri ?></title>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<style>
 * {
