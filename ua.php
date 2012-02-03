@@ -59,7 +59,7 @@ function getBrowser($u_agent)
 		$bname = 'Wget';
 		$ub = 'wget';
 	}
-	elseif(preg_match('/^([^\/]+)\/([0-9.]+)/',$u_agent,$m))
+	elseif(preg_match('/^([A-z0-9]+)\/([0-9.]+)$/',$u_agent,$m))
 	{
 		$bname = $m[1];
 		$ub = $m[1];
