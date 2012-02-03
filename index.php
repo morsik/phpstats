@@ -3,14 +3,7 @@
  * Author: Konrad 'morsik' Mosoń <morsik@darkserver.it>
  */
 
-/* config starts here */
-
-$uri     = 'http://example.com/count.png';
-$urifile = '/count.png';
-$logfile = 'access.log';
-
-/* config ends here */
-
+include('./config.php');
 include('./ua.php');
 
 $f = fopen($logfile, 'r');
