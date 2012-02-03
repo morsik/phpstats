@@ -5,6 +5,7 @@
 
 /* config starts here */
 
+$uri     = 'http://example.com/count.png';
 $urifile = '/count.png';
 $logfile = 'access.log';
 
@@ -146,7 +147,7 @@ td {
 	</style>
 </head>
 <body>
-	stats for <a href="http://misc.darkserver.it/rootnode-dump.sql">http://misc.darkserver.it/rootnode-dump.sql</a>
+	stats for <a href="<?php echo $uri ?>"><?php echo $uri ?></a>
 	<div><span class="c7">all requests:</span> <?php echo $count ?></div>
 
 	<div class="section">
