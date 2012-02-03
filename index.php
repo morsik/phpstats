@@ -20,7 +20,7 @@ while (!feof($f))
 	$l = fgets($f, 1024);
 	$match = array();
 	
-	preg_match('#^([0-9.]+) (.*) "GET '.$urifile.' HTTP/1.1" 200 ([0-9\-]+) "(.+)" "(.*)"$#', $l, $match);
+	preg_match('#^([0-9.]+) (.*) "GET '.$urifile.' HTTP/[0-9.]+" 200 ([0-9\-]+) "(.+)" "(.*)"$#', $l, $match);
 
 	if ($match)
 	{
