@@ -153,5 +153,7 @@ td {
 		<?php } ?>
 		</table>
 	</div>
+
+	stats created with <a href="https://github.com/morsik/phpstats">phpstats</a>
 </body>
 </html>
